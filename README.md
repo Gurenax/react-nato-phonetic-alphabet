@@ -1,5 +1,5 @@
 # Nato Phonetic Alphabet Converter
-Converts regular words and letters to Nato Phonetic
+Converts regular words and letters to Nato Phonetic and vice versa
 
 Example:  
 `Message:  Hello World!`    
