@@ -32,7 +32,8 @@ class App extends Component {
   }
 
   render() {
-    const message = this.state.message
+    // If message was entered in phonetic text field, convert to Message. Otherwise, use props value
+    const message = this.state.source==='phonetic' ? this.state.message : this.props.value;
     // If message was entered in message text field, convert to Nato. Otherwise, use props value
     const phonetic = this.state.source==='message' ? toNato(this.state.message) : this.props.value
 
