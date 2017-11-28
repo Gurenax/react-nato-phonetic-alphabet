@@ -51,6 +51,7 @@ function toNato(words) {
         // If val is not undefined, push val to nato array else use original character
         nato.push(val !== undefined ? val : char)
       }
+      return null
     })
   return nato.join(' ') // Convert the array to string separated by spaces
 }

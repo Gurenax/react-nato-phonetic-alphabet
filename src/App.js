@@ -12,9 +12,7 @@ class App extends Component {
   }
 
   onMessageChange = (message) => {
-    this.setState( (prevState) => {
-      const beforeItems = prevState.message
-      // const afterItems = message
+    this.setState( () => {
       return {
         message: message
       }
