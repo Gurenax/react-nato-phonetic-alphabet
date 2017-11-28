@@ -6,7 +6,7 @@ import React from 'react'
 *   children - any component under label (e.g. text for label)
 */
 const Label = ({ htmlFor, title }) => ( 
-  <label for={ htmlFor }>{ title }</label>
+  <label htmlFor={ htmlFor }>{ title }</label>
 )
 
 export default Label
