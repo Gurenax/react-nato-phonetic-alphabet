@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import TextArea from './components/TextArea'
+import Label from './components/Label'
+
+import ConvertToNato from './lib/nato'
 
 class App extends Component {
+  state = {
+    phonetic: 'Hello'
+  }
   render() {
+    const phonetic = ConvertToNato(this.state.phonetic);
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="container">
+          <Label htmlFor='message' title='Your Message' />
+          <TextArea id='message' rows='5' placeholder='Enter your message' />
+          <Label htmlFor='nato' title='NATO Phonetic' />
+          <TextArea id='nato' rows='5' placeholder='Enter your message' value={phonetic}/>
+        </div>
       </div>
     );
   }
